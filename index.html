@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Personal Portofolio</title>
+</head>
+<body>
+
+    <nav>
+        <div id="nav-logo">
+            <div class="logo">VT</div>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">About</a></li>
+            <li><a href="index.html">Projects</a></li>
+            <li><a href="index.html">Contact</a></li>
+        </ul>
+
+    </nav>
+
+    <header class="container">
+        <div class="content">
+            <span class="blur"></span>
+            <span class="blur"></span>
+            <h3>Welcome!</h3>
+            <h1>Hi, I'm <span>Vi Thai</span></h1>
+            <p>
+                I'm glad you made it to my website.
+            </p>
+
+            <h2> Let's Get Started!</h2>
+        </div>
+        <div class="image">
+            <img src="viportrait.jpg">
+        </div>
+    </header>
+
+
+    <section class="container">
+        <h2 class="header">ABOUT ME</h2>
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="aboutimg.png">
+                    </div>
+                    <div class="about-col-2">
+                        <p> I am orginally from Vietnam, currently pursuing a bachelor degree in Management Information System at Augsburg University, Minnesota. I am interested in becoming a Front End Developer<br> Besides studying, I love trying new restaurant since I am a food lover. I also enjoy skiing, hiking, and swimming.</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active tab" id="skills">
+                            <ul>
+                                <li><span>Front End Coding</span><br>HTML, CSS, and JavaScript (Basic)</li>
+                                <li><span>Language Programming</span><br>Python (Basic)</li>
+                                <li><span>Computer Literacy Skills</span></li>
+                                <li><span>Critical Thinking</span></li>
+                                <li><span>Problem Solving</span></li>
+                                <li><span>Strong Verbal & Communication</span></li>
+                                <li><span>Time Management</span></li>
+                                <li><span>Organizational Skills</span></li>
+                                <li><span>Team Work</span></li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2019</span><br>Saint Agnes School- High School Diploma</li>
+                                <li><span>2021</span><br>Saint Paul College- Associate Degree in Management Information System</li>
+                                <li><span>On Going</span><br>Augsburg University- Bachelor in Mangement Information System</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    </section>
+
+    <section class="container">
+        <h2 class="header">MY PROJECTS</h2>
+        <div class="projects">
+            <div class="card">
+                <span><i class="ri-code-box-line"></i></span>
+                <h4>-Weather App-</h4>
+                <p>The combination of science and technology to predict the conditions of the atmosphere for a given location and time. <br>For this project, I used APIs to ensure that the app reflects the latest weather updates.<br> Feel free to type in your favourite city to see how its weather looks like!</p>
+                <a href="https://vithai1004.github.io/weather-app/">View Project <i class="ri-cursor-fill"></i>
+                </a>
+            </div>
+
+            <div class="card">
+                <span><i class="ri-code-box-line"></i></span>
+                <h4>-Personal website-</h4>
+                <p>This website is my first ever project for learning how to code.</p>
+            </div>
+        </div>
+    </section>
+
+<!-------------------------------Contact-->
+<section class="container">
+    <h2 class="header">CONTACT ME</h2>
+        <div class="contact">
+            <p><i class="ri-mail-send-line"></i>viithaii04@gmail.com</p>
+            <p><i class="ri-linkedin-box-fill"></i>vi-thai-221459267</p>
+        </div>
+</section>
+
+
+<script>
+    var tablinks = document.getElementsByClassName('tab-links');
+    var tabcontents = document.getElementsByClassName('tab-contents');
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-links");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+ 
+
+
+<script src="script.js"></script>
+</body>
+</html>
